@@ -34,7 +34,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          5th year student passionate about creating immersive gaming experiences through innovative code and creative design
+          5th year student at Epitech, passionate about creating immersive gaming experiences through innovative code and creative design
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -47,17 +47,17 @@ const HeroSection = () => {
           </Button>
           
           <div className="flex gap-3">
-            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-secondary/50 transition-all duration-300">
+            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/50 hover:text-primary transition-all duration-300">
               <a href="https://github.com/mathieubonnieu" target="_blank" rel="noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-secondary/50 transition-all duration-300">
+            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/50 hover:text-primary transition-all duration-300">
               <a href="https://www.linkedin.com/in/mathieu-bonnieu" target="_blank" rel="noreferrer">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-secondary/50 transition-all duration-300">
+            <Button asChild variant="outline" size="icon" className="border-border/50 bg-background/50 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/50 hover:text-primary transition-all duration-300">
               <a href="https://mail.google.com/mail/?view=cm&to=mathieubonnieu07@gmail.com" target="_blank" rel="noreferrer">
                 <Mail className="h-5 w-5" />
               </a>

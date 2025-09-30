@@ -7,17 +7,17 @@ const AboutSection = () => {
     {
       icon: Code,
       title: "Technical Excellence",
-      description: "Proficient in C++, C#, Unity, Unreal Engine, and modern game development frameworks"
+      description: "Proficient in C++, C#, Unity, Godot, and modern game development frameworks"
     },
     {
       icon: Gamepad2,
       title: "Game Design",
-      description: "5+ years of experience creating engaging gameplay mechanics and user experiences"
+      description: "Many games developed in 2D and 3D, with isometric and top-down views, in solo or multi-player"
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Passionate about pushing boundaries with new technologies like VR, AR, and AI in gaming"
+      description: "Passionate about creating innovative games and experiences, throughout beautiful graphics and gameplay"
     },
     {
       icon: Users,
@@ -54,7 +54,7 @@ const AboutSection = () => {
               development, from low-level engine programming to high-level game design and user experience.
             </p>
             <div className="flex flex-wrap gap-2 pt-4">
-              {["Unity", "Unreal Engine", "C++", "C#", "JavaScript", "Python", "Blender", "Git"].map((skill) => (
+              {["Unity", "Godot", "C#", "C++", "C", "Python", "Javascipt", "Maya", "Git"].map((skill) => (
                 <Badge key={skill} variant="secondary" className="bg-secondary/50 border border-border/30">
                   {skill}
                 </Badge>

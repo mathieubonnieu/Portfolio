@@ -2,13 +2,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Play } from "lucide-react";
+// Use Vite base URL to reliably reference assets in `public/` in dev and production
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "Neon Runner",
       description: "A fast-paced cyberpunk endless runner with dynamic lighting and procedural level generation",
-      image: "/placeholder.svg",
+      image: publicAsset('placeholder.svg'),
       tags: ["Unity", "C#", "Procedural Generation", "Mobile"],
       type: "Mobile Game",
       status: "Published"
@@ -16,7 +18,7 @@ const ProjectsSection = () => {
     {
       title: "Mystical Realms",
       description: "Open-world fantasy RPG with advanced AI companions and dynamic weather systems",
-      image: "/placeholder.svg",
+      image: publicAsset('placeholder.svg'),
       tags: ["Unreal Engine", "C++", "AI", "RPG"],
       type: "PC Game",
       status: "In Development"
@@ -24,7 +26,7 @@ const ProjectsSection = () => {
     {
       title: "VR Escape Room",
       description: "Immersive VR puzzle game featuring realistic physics and spatial audio",
-      image: "/placeholder.svg",
+      image: publicAsset('placeholder.svg'),
       tags: ["Unity", "VR", "Physics", "Puzzle"],
       type: "VR Experience",
       status: "Prototype"
@@ -32,7 +34,7 @@ const ProjectsSection = () => {
     {
       title: "Quantum Chess",
       description: "Revolutionary chess variant with quantum mechanics and multiplayer networking",
-      image: "/placeholder.svg",
+      image: publicAsset('placeholder.svg'),
       tags: ["C++", "Networking", "Strategy", "Innovative"],
       type: "Strategy Game",
       status: "Beta"
@@ -111,11 +113,11 @@ const ProjectsSection = () => {
                     <Play className="h-4 w-4 mr-2" />
                     Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="border-border/50 hover:bg-secondary/50">
+                  <Button variant="outline" size="sm" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
                     <Github className="h-4 w-4 mr-2" />
                     Code
                   </Button>
-                  <Button variant="outline" size="icon" className="border-border/50 hover:bg-secondary/50">
+                  <Button variant="outline" size="icon" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
                     <ExternalLink className="h-4 w-4" />
                   </Button>
                 </div>
@@ -125,7 +127,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-border/50 hover:bg-secondary/50">
+          <Button variant="outline" size="lg" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
             <Github className="h-5 w-5 mr-2" />
             View All Projects on GitHub
           </Button>
