@@ -30,7 +30,7 @@ const AboutSection = () => {
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="outline" className="mb-4 border-border/50">About Me</Badge>
+          <Badge variant="outline" className="mb-4 border-border/50 text-sm px-4 py-2">About Me</Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Crafting Digital
             <span className="bg-gradient-to-r from-neon-purple to-neon-cyan bg-clip-text text-transparent"> Worlds</span>
@@ -45,7 +45,7 @@ const AboutSection = () => {
           <div className="space-y-6 animate-slide-in">
             <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              My passion for game development began in high school when I created my first simple 2D platformer. 
+              My passion for game development began in high school when I created my first simple snake game with Python. 
               Since then, I've evolved into a well-rounded developer with experience across multiple engines, 
               programming languages, and game genres.
             </p>

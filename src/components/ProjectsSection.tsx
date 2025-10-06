@@ -54,7 +54,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-24 px-6 bg-secondary/20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="outline" className="mb-4 border-border/50">Featured Projects</Badge>
+          <Badge variant="outline" className="mb-4 border-border/50 text-sm px-4 py-2">Featured Projects</Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Game
             <span className="bg-gradient-to-r from-neon-pink to-neon-purple bg-clip-text text-transparent"> Portfolio</span>
@@ -113,9 +113,16 @@ const ProjectsSection = () => {
                     <Play className="h-4 w-4 mr-2" />
                     Demo
                   </Button>
-                  <Button variant="outline" size="sm" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary"
+                    asChild
+                  >
+                    <a href="https://github.com/mathieubonnieu" target="_blank" rel="noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
                   </Button>
                   <Button variant="outline" size="icon" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
                     <ExternalLink className="h-4 w-4" />
@@ -127,9 +134,11 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
-            <Github className="h-5 w-5 mr-2" />
-            View All Projects on GitHub
+          <Button variant="outline" size="lg" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary " asChild>
+            <a href="https://github.com/mathieubonnieu" target="_blank" rel="noreferrer">
+              <Github className="h-5 w-5 mr-2" />
+              View All Projects on GitHub
+            </a>
           </Button>
         </div>
       </div>

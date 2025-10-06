@@ -40,7 +40,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold bg-gradient-to-r from-neon-purple to-neon-cyan bg-clip-text text-transparent">
-            GameDev.Portfolio
+            Mathieu Bonnieu
           </div>
 
           {/* Desktop Navigation */}

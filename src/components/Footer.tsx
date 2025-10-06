@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="text-xl font-bold bg-gradient-to-r from-neon-purple to-neon-cyan bg-clip-text text-transparent">
-              GameDev.Portfolio
+              Mathieu Bonnieu
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               5th year game software student passionate about creating immersive gaming experiences 

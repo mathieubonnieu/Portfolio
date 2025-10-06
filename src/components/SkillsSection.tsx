@@ -52,7 +52,7 @@ const SkillsSection = () => {
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="outline" className="mb-4 border-border/50">Technical Skills</Badge>
+          <Badge variant="outline" className="mb-4 border-border/50 text-sm px-4 py-2">Technical Skills</Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Technical
             <span className="bg-gradient-to-r from-neon-cyan to-neon-pink bg-clip-text text-transparent"> Expertise</span>
