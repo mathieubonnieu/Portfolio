@@ -151,14 +151,14 @@ const ContactSection = () => {
                   <Mail className="h-5 w-5 text-accent" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">mathieubonnieu07@email.com</p>
+                    <p className="text-sm text-muted-foreground">mathieubonnieu07@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-accent" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-sm text-muted-foreground">07 82 87 44 73</p>
+                    <p className="text-sm text-muted-foreground">+33 7 82 87 44 73</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

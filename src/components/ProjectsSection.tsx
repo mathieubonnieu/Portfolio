@@ -2,42 +2,54 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Play } from "lucide-react";
+import MyRioBrosImage from '../../dist/assets/ProjectsImages/MyRioBrosImage.png';
+import GravityFightsImage from '../../dist/assets/ProjectsImages/GravityFightsImage.png';
+import RaccoonImage from '../../dist/assets/ProjectsImages/RaccoonImage.png';
+import FishTogetherImage from '../../dist/assets/ProjectsImages/FishTogetherImage.png';
 // Use Vite base URL to reliably reference assets in `public/` in dev and production
 const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Neon Runner",
-      description: "A fast-paced cyberpunk endless runner with dynamic lighting and procedural level generation",
-      image: publicAsset('placeholder.svg'),
-      tags: ["Unity", "C#", "Procedural Generation", "Mobile"],
-      type: "Mobile Game",
-      status: "Published"
+      title: "Riff's Adventures",
+      description: "A roguelike game with procedurally generated map, with many biomes and enemies, and different items to boost your character",
+      image: RaccoonImage,
+      tags: ["Unity", "C#", "Procedural Generation", "Roguelike"],
+      type: "Roguelike",
+      status: "Published",
+      githubUrl: "https://github.com/mathieubonnieu/Riff-s-Adventures", // À remplacer par le vrai lien
+      demoUrl: "#" // À remplacer par le lien de démo
     },
     {
-      title: "Mystical Realms",
-      description: "Open-world fantasy RPG with advanced AI companions and dynamic weather systems",
-      image: publicAsset('placeholder.svg'),
-      tags: ["Unreal Engine", "C++", "AI", "RPG"],
-      type: "PC Game",
-      status: "In Development"
+      title: "Fish Together",
+      description: "RPG game in solo/coop with friends, with a main quest, where the player has to save a village by fishing mobs with QTE",
+      image: FishTogetherImage,
+      tags: ["Unity", "C#", "QTE", "RPG", "Coop", "Network"],
+      type: "Coop game",
+      status: "In Development",
+      githubUrl: "https://github.com/mathieubonnieu/FishTogether", // À remplacer par le vrai lien
+      demoUrl: "#" // À remplacer par le lien de démo
     },
     {
-      title: "VR Escape Room",
-      description: "Immersive VR puzzle game featuring realistic physics and spatial audio",
-      image: publicAsset('placeholder.svg'),
-      tags: ["Unity", "VR", "Physics", "Puzzle"],
-      type: "VR Experience",
-      status: "Prototype"
+      title: "Gravity Fights",
+      description: "Local multi-player battle royale game, where the player has to fight against other players in a gravity-based arena, with different game modes and items",
+      image: GravityFightsImage,
+      tags: ["Godot", "battle royale", "Physics", "GDScript", "Multiplayer"],
+      type: "Battle Royale",
+      status: "Beta",
+      githubUrl: "https://github.com/mathieubonnieu/GravityFights",
+      demoUrl: "#" // À remplacer par le lien de démo
     },
     {
-      title: "Quantum Chess",
-      description: "Revolutionary chess variant with quantum mechanics and multiplayer networking",
-      image: publicAsset('placeholder.svg'),
-      tags: ["C++", "Networking", "Strategy", "Innovative"],
-      type: "Strategy Game",
-      status: "Beta"
+      title: "My Riobros",
+      description: "A 2D platformer game, where the player has to reach the end of the level by jumping and dodging obstacles on platforms",
+      image: MyRioBrosImage,
+      tags: ["Unity", "C#", "Platformer", "Solo game"],
+      type: "Platformer",
+      status: "In Development",
+      githubUrl: "https://github.com/mathieubonnieu/MyRiobros", // À remplacer par le vrai lien
+      demoUrl: "#" // À remplacer par le lien de démo
     }
   ];
 
@@ -109,9 +121,15 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button size="sm" className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30">
-                    <Play className="h-4 w-4 mr-2" />
-                    Demo
+                  <Button 
+                    size="sm" 
+                    className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30"
+                    asChild
+                  >
+                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
+                      <Play className="h-4 w-4 mr-2" />
+                      Demo
+                    </a>
                   </Button>
                   <Button 
                     variant="outline" 
@@ -119,13 +137,20 @@ const ProjectsSection = () => {
                     className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary"
                     asChild
                   >
-                    <a href="https://github.com/mathieubonnieu" target="_blank" rel="noreferrer">
+                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary">
-                    <ExternalLink className="h-4 w-4" />
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="border-border/50 hover:bg-primary/20 hover:border-primary/50 hover:text-primary"
+                    asChild
+                  >
+                    <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>

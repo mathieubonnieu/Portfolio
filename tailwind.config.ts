@@ -103,5 +103,11 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("daisyui"),
+  ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "cyberpunk"], // Vous pouvez choisir les thèmes que vous voulez
+  },
 } satisfies Config;
