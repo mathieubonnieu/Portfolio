@@ -2,10 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Play } from "lucide-react";
-import MyRioBrosImage from '../../dist/assets/ProjectsImages/MyRioBrosImage.png';
-import GravityFightsImage from '../../dist/assets/ProjectsImages/GravityFightsImage.png';
-import RaccoonImage from '../../dist/assets/ProjectsImages/RaccoonImage.png';
-import FishTogetherImage from '../../dist/assets/ProjectsImages/FishTogetherImage.png';
+import MyRioBrosImage from '../assets/ProjectsImages/MyRioBrosImage.png';
+import GravityFightsImage from '../assets/ProjectsImages/GravityFightsImage.png';
+import RaccoonImage from '../assets/ProjectsImages/RaccoonImage.png';
+import FishTogetherImage from '../assets/ProjectsImages/FishTogetherImage.png';
 // Use Vite base URL to reliably reference assets in `public/` in dev and production
 const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -18,8 +18,9 @@ const ProjectsSection = () => {
       tags: ["Unity", "C#", "Procedural Generation", "Roguelike"],
       type: "Roguelike",
       status: "Published",
-      githubUrl: "https://github.com/mathieubonnieu/Riff-s-Adventures", // À remplacer par le vrai lien
-      demoUrl: "#" // À remplacer par le lien de démo
+      githubUrl: "https://github.com/mathieubonnieu/Riff-s-Adventures",
+      demoUrl: `${import.meta.env.BASE_URL}demos/Riff's Adventures.zip`,
+      inComing: true,
     },
     {
       title: "Fish Together",
@@ -28,8 +29,9 @@ const ProjectsSection = () => {
       tags: ["Unity", "C#", "QTE", "RPG", "Coop", "Network"],
       type: "Coop game",
       status: "In Development",
-      githubUrl: "https://github.com/mathieubonnieu/FishTogether", // À remplacer par le vrai lien
-      demoUrl: "#" // À remplacer par le lien de démo
+      githubUrl: "https://github.com/mathieubonnieu/FishTogether",
+      demoUrl: `${import.meta.env.BASE_URL}demos/Fish-Together.zip`,
+      inComing: false,
     },
     {
       title: "Gravity Fights",
@@ -39,7 +41,8 @@ const ProjectsSection = () => {
       type: "Battle Royale",
       status: "Beta",
       githubUrl: "https://github.com/mathieubonnieu/GravityFights",
-      demoUrl: "#" // À remplacer par le lien de démo
+      demoUrl: `${import.meta.env.BASE_URL}demos/gravity-fights.zip`,
+      inComing: true,
     },
     {
       title: "My Riobros",
@@ -48,15 +51,16 @@ const ProjectsSection = () => {
       tags: ["Unity", "C#", "Platformer", "Solo game"],
       type: "Platformer",
       status: "In Development",
-      githubUrl: "https://github.com/mathieubonnieu/MyRiobros", // À remplacer par le vrai lien
-      demoUrl: "#" // À remplacer par le lien de démo
+      githubUrl: "https://github.com/mathieubonnieu/My-Riobros",
+      demoUrl: `${import.meta.env.BASE_URL}demos/my-riobros.zip`,
+      inComing: true,
     }
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Published": return "bg-green-500/20 text-green-400 border-green-500/30";
-      case "In Development": return "bg-blue-500/20 text-blue-400 border-blue-500/30";
+      case "In Development": return "bg-pink-500/20 text-pink-400 border-pink-500/30";
       case "Beta": return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
       default: return "bg-purple-500/20 text-purple-400 border-purple-500/30";
     }
@@ -121,16 +125,31 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30"
-                    asChild
-                  >
-                    <a href={project.demoUrl} target="_blank" rel="noreferrer">
-                      <Play className="h-4 w-4 mr-2" />
-                      Demo
-                    </a>
-                  </Button>
+                  {project.inComing ? (
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-zinc-300 text-zinc-600 border border-zinc-400 opacity-60 cursor-not-allowed"
+                      disabled
+                    >
+                      Demo in Coming 
+                    </Button>
+                  ) : (
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30"
+                      asChild
+                    >
+                      <a
+                        href={project.demoUrl}
+                        download={`${project.title.replace(/\s+/g, '-').toLowerCase()}-demo.zip`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Play className="h-4 w-4 mr-2" />
+                        Download Demo
+                      </a>
+                    </Button>
+                    )}
                   <Button 
                     variant="outline" 
                     size="sm" 

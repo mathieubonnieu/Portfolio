@@ -6,17 +6,17 @@ const SkillsSection = () => {
   const skillRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const skills = [
-    { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", color: "from-blue-600 to-blue-800", glow: "shadow-blue-600/50" },
+    { name: "Unity", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", color: "from-gray-600 to-gray-800", glow: "shadow-gray-500/50" },
+    { name: "Godot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", color: "from-blue-400 to-blue-600", glow: "shadow-blue-400/50" },
     { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", color: "from-blue-500 to-blue-700", glow: "shadow-blue-500/50" },
     { name: "C#", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg", color: "from-purple-500 to-purple-700", glow: "shadow-purple-500/50" },
+    { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", color: "from-blue-600 to-blue-800", glow: "shadow-blue-600/50" },
     { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", color: "from-green-500 to-green-700", glow: "shadow-green-500/50" },
     
     { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", color: "from-blue-400 to-blue-600", glow: "shadow-blue-400/50" },
     { name: "React/React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", color: "from-cyan-400 to-cyan-600", glow: "shadow-cyan-500/50" },
     { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg", color: "from-green-400 to-green-600", glow: "shadow-green-400/50" },
     
-    { name: "Unity", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg", color: "from-gray-600 to-gray-800", glow: "shadow-gray-500/50" },
-    { name: "Godot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg", color: "from-blue-400 to-blue-600", glow: "shadow-blue-400/50" },
     
     { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", color: "from-orange-500 to-orange-700", glow: "shadow-orange-500/50" },
     { name: "Maya", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maya/maya-original.svg", color: "from-teal-600 to-teal-800", glow: "shadow-teal-600/50" },
@@ -24,7 +24,7 @@ const SkillsSection = () => {
     { name: "Level Design", logo: "https://cdn-icons-png.flaticon.com/512/2620/2620975.png", color: "from-purple-500 to-pink-500", glow: "shadow-purple-500/50" },
     { name: "Game Design", logo: "https://cdn-icons-png.flaticon.com/512/686/686589.png", color: "from-cyan-500 to-blue-500", glow: "shadow-cyan-500/50" },
     
-    { name: "VR/AR", logo: "https://cdn-icons-png.flaticon.com/512/3143/3143611.png", color: "from-violet-500 to-violet-700", glow: "shadow-violet-500/50" },
+    { name: "VR/AR", logo: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png", color: "from-violet-500 to-violet-700", glow: "shadow-violet-500/50" },
     
     { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", color: "from-blue-500 to-blue-700", glow: "shadow-blue-500/50" },
     { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", color: "from-purple-400 to-purple-600", glow: "shadow-purple-400/50" },

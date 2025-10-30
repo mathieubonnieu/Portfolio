@@ -15,6 +15,24 @@ const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
+  const handleDownloadResume = () => {
+    // Try to open the PDF in a new tab first
+    const pdfUrl = '/resume.pdf';
+    const newWindow = window.open(pdfUrl, '_blank');
+    
+    // If popup was blocked, try direct download
+    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+      // Create a link element to trigger download
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'Mathieu_Bonnieu_CV.pdf';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   const handleSendEmail = async () => {
     const name = nameRef.current?.value || '';
     const email = emailRef.current?.value || '';
@@ -188,9 +206,15 @@ const ContactSection = () => {
                     </a>
                   </Button>
                 </div>
-                <Button variant="outline" className="w-full border-primary/50 text-primary hover:bg-primary/10">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download Resume (PDF)
+                <Button 
+                  variant="outline" 
+                  className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                  asChild
+                >
+                  <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Mathieu_Bonnieu_CV.pdf" target="_blank">
+                    <Download className="h-4 w-4 mr-2" />
+                    Download Resume (PDF)
+                  </a>
                 </Button>
               </div>
             </Card>
