@@ -17,7 +17,7 @@ const ContactSection = () => {
 
   const handleDownloadResume = () => {
     // Try to open the PDF in a new tab first
-    const pdfUrl = '/resume.pdf';
+    const pdfUrl = '/cv/resume.pdf';
     const newWindow = window.open(pdfUrl, '_blank');
     
     // If popup was blocked, try direct download
@@ -211,7 +211,7 @@ const ContactSection = () => {
                   className="w-full border-primary/50 text-primary hover:bg-primary/10"
                   asChild
                 >
-                  <a href={`${import.meta.env.BASE_URL}resume.pdf`} download="Mathieu_Bonnieu_CV.pdf" target="_blank">
+                  <a href={`${import.meta.env.BASE_URL}cv/resume.pdf`} download="Mathieu_Bonnieu_CV.pdf" target="_blank">
                     <Download className="h-4 w-4 mr-2" />
                     Download Resume (PDF)
                   </a>
