@@ -1,7 +1,5 @@
 # Game Demos Folder
 
-Place your game demos here in the following structure:
-
 ## Riff's Adventures
 - `riffs-adventures.zip` - Contains the Unity executable and README
 
