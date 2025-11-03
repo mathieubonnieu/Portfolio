@@ -52,8 +52,8 @@ const ProjectsSection = () => {
       type: "Platformer",
       status: "In Development",
       githubUrl: "https://github.com/mathieubonnieu/My-Riobros",
-      demoUrl: `${import.meta.env.BASE_URL}demos/my-riobros.zip`,
-      inComing: true,
+      demoUrl: `${import.meta.env.BASE_URL}demos/My-RioBros.zip`,
+      inComing: false,
     }
   ];
 
