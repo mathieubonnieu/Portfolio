@@ -19,8 +19,8 @@ const ProjectsSection = () => {
       type: "Roguelike",
       status: "Published",
       githubUrl: "https://github.com/mathieubonnieu/Riff-s-Adventures",
-      demoUrl: `${import.meta.env.BASE_URL}demos/Riff's Adventures.zip`,
-      inComing: true,
+      demoUrl: `${import.meta.env.BASE_URL}demos/Riff's-Adventures.zip`,
+      inComing: false,
     },
     {
       title: "Fish Together",
