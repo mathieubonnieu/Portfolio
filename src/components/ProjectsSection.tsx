@@ -19,7 +19,7 @@ const ProjectsSection = () => {
       type: "Roguelike",
       status: "Published",
       githubUrl: "https://github.com/mathieubonnieu/Riff-s-Adventures",
-      demoUrl: `${import.meta.env.BASE_URL}demos/Riff's-Adventures.zip`,
+      demoUrl: `https://mega.nz/file/vhJwUZjJ#YQd3q7Z7yQCSlcxRDDJg0CZGCUrgTIoi7vMW-DIEfB4`,
       inComing: false,
     },
     {
